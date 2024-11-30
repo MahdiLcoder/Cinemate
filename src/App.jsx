@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import AllRoutes from './Routes/AllRoutes'
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react';
+import AllRoutes from './Routes/AllRoutes';
 
+function App() {
   return (
     <>
       <AllRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
