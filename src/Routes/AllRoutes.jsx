@@ -16,7 +16,8 @@ import PageNotFound from '../Pages/PageNotFound';
 
 export default function AllRoutes() {
   return (
-    <Routes>
+    <div className='dark:bg-slate-800'>
+      <Routes>
       <Route path="/" element={<MovieLists />} />
       <Route path="/movie/:id" element={<MovieDetails />} />
       <Route path="/movies/popular" element={<MovieLists />} />
@@ -25,5 +26,6 @@ export default function AllRoutes() {
       <Route path="/search" element={<Search />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
+    </div>
   );
 }
