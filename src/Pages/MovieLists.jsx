@@ -1,10 +1,10 @@
 import React from 'react';
 import Cart from '../Components/Cart';
 import useFetch from '../Hooks/useFetch';
-export default function MovieLists() {
-  const API_URL = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3a34276ccb3825166b2ac61cb73b2efb&page=1';
-  
-  const { data: movies, loading } = useFetch(API_URL);
+export default function MovieLists({api}) {
+
+  const { data: movies, loading } = useFetch(api);
+
 
   if (loading) {
     return <div>Loading...</div>;

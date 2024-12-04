@@ -1,13 +1,15 @@
 import React from 'react'
 
-export default function useFetch(URL) {
+export default function useFetch(api) {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+
+  const url = `https://api.themoviedb.org/3${api}?api_key=3a34276ccb3825166b2ac61cb73b2efb`;
 
   React.useEffect(() => {
     async function fetchMovies() {
       try {
-        const res = await fetch(URL);
+        const res = await fetch(url);
         if (!res.ok) {
           throw new Error(`Network response was not ok: ${res.statusText}`);
         }
@@ -21,7 +23,7 @@ export default function useFetch(URL) {
       }
     }
     fetchMovies();
-  }, [URL]); 
+  }, [url]); 
 
   return { data, loading }
 }
