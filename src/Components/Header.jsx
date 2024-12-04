@@ -34,8 +34,8 @@ export default function Header() {
   }, [darkMode]);
   
   return (
-    <header>
-      <nav className={`border-gray-200 ${darkMode ? 'dark:bg-gray-900' : 'bg-white'}`}>
+    <header className="sticky top-0 z-50">
+      <nav className={` shadow-lg dark:border-gray-600 border-gray-200 ${darkMode ? 'dark:bg-gray-900' : 'bg-white'}`}>
         <div className="flex flex-wrap items-center justify-between mx-auto p-4">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={cinemateLogo} className="h-8" alt="Cinemate Logo" />
