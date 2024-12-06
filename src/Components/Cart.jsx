@@ -1,5 +1,5 @@
   import React from 'react'
-  import { Link } from 'react-router-dom'
+  import { Link} from 'react-router-dom'
   export default function Cart({movie}) {
     const {poster_path, title, id, overview} = movie;
     return (
