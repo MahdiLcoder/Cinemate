@@ -1,10 +1,12 @@
 import React from 'react';
 import Cart from '../Components/Cart';
 import useFetch from '../Hooks/useFetch';
-export default function MovieLists({api, query}) {
+import useTitle from '../Hooks/useTitle';
+export default function MovieLists({api, query, title}) {
 
   const { data: movies, loading } = useFetch(api, query);
 
+  useTitle({title})
 
   if (loading) {
     return <div>Loading...</div>;

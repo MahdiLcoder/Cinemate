@@ -1,7 +1,9 @@
 import React from 'react'
 import pageNotFound from '../assets/pagenotfound.png'
 import { Link } from 'react-router-dom'
-export default function PageNotFound() {
+import useTitle from '../Hooks/useTitle'
+export default function PageNotFound({title}) {
+  useTitle({title})
   return (
     <div className='flex justify-center items-center h-screen'>
       <section className='flex flex-col justify-center px-2'>

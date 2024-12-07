@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-
+import useTitle from '../Hooks/useTitle';
 export default function MovieDetails() {
   const { id } = useParams();
   const [movie, setMovie] = React.useState(null);
@@ -12,6 +12,9 @@ export default function MovieDetails() {
     }
     fetchMovie();
   }, [id]);
+
+  useTitle({title: `${movie?.title}`})
+  
   if (!movie) {
     return <div>Loading...</div>;
   }

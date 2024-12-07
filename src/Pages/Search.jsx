@@ -3,10 +3,13 @@ import useFetch from '../Hooks/useFetch';
 import { useSearchParams } from 'react-router-dom';
 import Cart from '../Components/Cart';
 import { Link } from 'react-router-dom';
+import useTitle from '../Hooks/useTitle';
 export default function Search({ api }) {
   const [searchParam] = useSearchParams();
   const queryTerm = searchParam.get("q");
   const { data: movies, loading } = useFetch(api, queryTerm);
+
+  useTitle({title: `Search: ${queryTerm}`})
 
   if (loading) {
     return <div>Loading...</div>;
