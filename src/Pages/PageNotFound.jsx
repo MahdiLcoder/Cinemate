@@ -7,7 +7,7 @@ export default function PageNotFound() {
       <section className='flex flex-col justify-center px-2'>
         <div className='flex flex-col justify-center items-center my-4'>
           <p className='text-7xl font-bold text-gray-700 dark:text-white'>404, Oops! </p>
-          <div className='max-w-6xl '>
+          <div className='max-w-6xl mt-4'>
             <img className='rounded' src={pageNotFound} alt="404 page not found" />
           </div>
         </div>

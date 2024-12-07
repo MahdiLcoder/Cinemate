@@ -17,6 +17,8 @@ export default function MovieLists({api, query}) {
           {movies.map((movie) => (
             <Cart key={movie.id} movie={movie} />
           ))}
+
+
         </div>
       </section>
     </main>
